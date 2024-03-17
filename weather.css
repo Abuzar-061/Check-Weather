@@ -41,34 +41,62 @@
 .search-input{
     width: 60%;
     height: 40px;
+    background: transparent;
     border: none;
+    border-bottom: 1px solid white;
     outline: none;
     border-radius: 2px;
-    color: rgba(128, 128, 128, 0.872);
+    color: white;
     padding-left: 30px;
     font-size: 15px;
 }
 .search-input::placeholder{
-    color: gray;
+    color: white;
     font-size: 15px;
 }
-#btn-search {
-    width: 100px;
-    height: 40px;
-    border-radius: 2px;
+
+.button {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    background-size: 400%;
+    color: #fff;
     border: none;
     cursor: pointer;
-    transition: 0.8s ease-in-out all;
-}
-#btn-search:hover {
-    background: linear-gradient(135deg, #00feba ,#5b548a);
-    transition: 0.8s ease-in-out;
-    transform: translateY(-6px);
-}
-#btn-search img{
-    width: 20px;
-    height: 20px;
-}
+  }
+  
+  .button:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .button-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      rgb(210, 93, 233) 10.8%,
+      rgb(213, 88, 238) 94.3%
+    );
+    transition: all 0.475s;
+  }
+  
+
 .weather{
     width: 100%;
     display: flex;
