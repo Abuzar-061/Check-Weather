@@ -19,7 +19,8 @@
     padding: 50px 30px;
     width: 400px;
     height: fit-content;
-    background: linear-gradient(135deg, #4b6cb7 ,#182848);
+    background: transparent;
+    backdrop-filter: blur(15px);
     border: 5px solid white;
     color: #fff;
     border-radius: 10px;
